@@ -1,0 +1,425 @@
+*{
+    margin: 0;
+    padding: 0;  
+    font-family: 'Poppins', sans-serif;  
+}
+.stickynav{
+    position: sticky;
+    z-index: 15;
+    background-color: rgb(11, 12, 12);
+    top: 0%;
+}
+.navsection{
+    min-height: 120vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(88, 113, 122, 0.7),rgba(88, 113, 122, 0.7)),url(./Images/eduford_img/banner.png);
+    background-position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+nav{
+    display: flex;
+    padding:2% 5%;
+    justify-content: space-between;
+    align-items: center;
+
+}
+nav img{
+    width: 150px;
+    position: sticky;
+    
+}
+.nav-list{
+    flex: 1;
+    text-align: right;
+}
+.nav-list ul li{
+    list-style-type: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+.nav-list ul li a{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+}
+.nav-list ul li ::after{
+    content: '';
+    width: 0;
+    height:2.2px ;
+    background-color: rgb(240, 15, 7);
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+.nav-list ul li:hover ::after{
+    width: 100%;
+}
+
+.textpage1{
+  width: 100%;
+  color: aliceblue;
+  top: 250px;
+  position: absolute;
+  transform: translate(-50% -50%);
+  text-align: center;
+  z-index: 1;
+}
+.textpage1 h1{
+    font-size: 65px;
+    padding: 30px;
+}
+.textpage1 p{
+    font-size: 30px;
+   margin: 45px 30px;
+}
+.textpage1 a{
+    color: aliceblue;
+    text-decoration: none;
+    padding: 20px;
+    border: 2.2px solid whitesmoke;
+    transition: 0.5s;
+    cursor: pointer;
+    padding-bottom: 20px;
+
+}
+.textpage1 a:hover{
+    border-color:rgb(240, 15, 7) ;
+    background-color: rgb(238, 44, 37);
+  border-radius: 40px;
+        border-top-right-radius: 0%;
+        border-bottom-left-radius: 0%;
+}
+nav .fa{
+    display: none;
+}
+
+/*---------------------- media query for 700 */
+@media(max-width:700px){
+    .textpage1 h1{
+        font-size: 35px;
+    }
+    .textpage1 p{
+        font-size: 15px;
+        padding: 15px;
+        padding-bottom: 0%;
+    }
+    .nav-list ul li{
+     display: block;
+    }
+    .nav-list{
+        position:absolute;
+        background: orangered;
+        height: 100vh;
+        width: 190px;
+        top: 0;
+        right:-200px;
+        text-align: left;
+        z-index: 2;
+        transition:1s ;
+    }
+   
+    nav .fa{
+        display: block;
+        color:  rgb(248, 246, 245);
+        margin: 20px;
+        font-size: 25px;
+        cursor: pointer;
+    }
+    .nav-list ul {
+        padding:30px;
+    }
+    .textpage1 a{
+        font-size: 13px;
+        color: aliceblue;
+        text-decoration: none;
+        padding: 15px;
+        border: 2.2px solid whitesmoke;
+        transition: 0.5s;
+        cursor: pointer;
+        position: static;
+        top: 0px;
+    }
+    .stickynav{
+        z-index: 15;
+        background-color: rgb(11, 12, 12);
+       
+    }
+}
+/*---------------------- media query for 701 - 1000 */
+
+@media(max-width:1000px ) and (min-width:701px){
+    
+    .textpage1 h1{
+        font-size: 45px;
+    }
+    .textpage1 p{
+        font-size: 25px;
+        padding: 30px;
+    }
+   
+       .nav-list ul {
+        padding:20px;
+    }
+    .nav-list ul li{
+        display: inline-block;
+       }
+       .textpage1 a{
+        font-size: 13px;
+        color: aliceblue;
+        text-decoration: none;
+        padding: 15px;
+        border: 2.2px solid whitesmoke;
+        transition: 0.5s;
+        cursor: pointer;
+    }
+}
+
+
+
+/* -----------------course section */
+
+.coursection{
+    background-color: rgba(0, 0, 0, 0.8);
+    color: aliceblue;
+    padding:5% 5%;
+    margin: auto;
+    padding-top: 80px;
+    text-align: center;   
+    z-index: 1;
+}
+.coursection h1{
+    padding-top: 110px;
+    font-size: 65px;
+}
+.coursection p{
+    font-size: 30px;
+    padding: 20px;
+}
+.courses{
+ display: flex;
+ justify-content: space-between;
+}
+.courselevel{
+    flex-basis: 31%;
+    box-sizing: border-box;
+    margin: 10px;
+    background-color: rgb(99, 99, 84,0.3);
+    border:1px solid white ;
+    border-radius: 5px;
+    transition: 0.5s;
+}
+.courselevel:hover{
+    border-color: 2px white;
+    box-shadow: 0 0 10px 0 wheat;
+}
+.courselevel h3{
+    font-size:30px ;
+    padding: 10px;
+}
+.courselevel p{
+    font-size: 20px;
+}
+
+@media(max-width:1000px ) and (min-width:701px){   
+    .courses{
+      flex-direction: column;
+    }
+    .courses h1{
+        font-size: 45px;
+    }
+    .courses p{
+        font-size: 25px;
+    }
+   
+
+}
+
+@media(max-width:700px ) {
+    .coursection h1{
+        font-size: 30px;
+    }
+    .courses{
+      flex-direction: column;
+    }
+    .courses h3{
+        font-size: 25px;
+    }
+    .courses p{
+        font-size: 15px;
+    }
+}
+
+
+/* -------------citysection */
+.citysection{
+    background-color: rgba(0, 0, 0, 0.8);
+    color: aliceblue;
+    text-align: center;
+    margin: auto;
+    width: 100%;
+    padding-top: 110px;
+}
+.citysection h1{  
+    font-size: 65px;
+    
+}
+.citysection p{
+    font-size: 30px;
+    padding:25px 100px ;
+}
+
+.cities{
+    display: flex;
+    flex-basis: 22%;
+    flex-direction: row;
+    justify-content: space-between;   
+    box-sizing: border-box;
+    margin-top: 50px;
+    overflow: hidden;  
+    padding:25px 100px ;
+}
+.cityimg{
+    flex-basis: 32%;
+    border-radius: 20px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+}
+
+.cityimg img{
+     border-radius: 20px;
+     width: 100%;
+     display: block;
+}
+.layer{
+    background: transparent;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left:0;
+    transition: 0.5s;
+}
+.layer:hover{
+    background-color: rgb(63, 73, 70,0.6);
+}
+.layer h2{
+    width: 100%;
+    font-weight: 500;
+    color: white;
+    font-size: 30px;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%);
+    position: absolute;
+    opacity: 0;
+    transition: 0.5s;
+}
+.layer:hover h2{
+    bottom: 79%;
+    opacity: 1;
+}
+
+@media(max-width:700px ){
+    .cities{
+        display:flex;
+        flex-direction: column;
+    }
+   
+    .citysection h1{  
+        font-size: 35px;
+    }
+    .citysection p{
+        font-size: 15px;
+    }  
+}
+
+@media(max-width:1000px ) and (min-width:701px){
+    .citysection h1{  
+        font-size: 45px;
+    }
+    .citysection p{
+        font-size: 25px;
+    }
+}
+
+
+/* ------------facilities */
+.facilitiessection{
+    background-color: rgba(0, 0, 0, 0.8);
+    color: aliceblue;
+    text-align: center;
+    width: 100%;
+}
+.facilitiessection h1{
+    font-size: 65px;
+    padding-top: 110px;
+}
+
+.facilitiessection p{
+    font-size: 30px;
+    padding: 40px 70px;
+}
+.facelities{
+display: flex;
+flex-direction: row;
+justify-content: space-around;
+padding: 20px 40px;
+}
+.aboutfacility{
+    background-color: rgb(99, 99, 84,0.3);
+    margin: 20px;
+    border-radius: 20px;
+    border: 2px solid white; 
+    transition: 0.2s;
+}
+.aboutfacility:hover{
+    border-color: 2px white;
+    box-shadow: 0 0 10px 0 wheat;
+}
+.aboutfacility h2{
+    padding-top: 20px;
+    text-align: center; 
+}
+.aboutfacility p{
+    text-align: center;
+    font-size: 15px;
+    padding: 10px;
+}
+.aboutfacility img{ 
+  width: 100%;
+ border-radius: 19px;
+}
+
+@media(max-width:1000px ) and (min-width:701px){
+    .facilitiessection h1{  
+        font-size: 45px;
+    }
+    .facilitiessection p{
+        font-size: 25px;
+    }
+    .facelities{
+        flex-direction: column;
+    }
+}
+
+
+@media(max-width:700px ){
+    .cities{
+        display:flex;
+        flex-direction: column;
+    }
+   
+    .facilitiessection h1{  
+        font-size: 35px;
+    }
+    .facilitiessection p{
+        font-size: 15px;
+    }  
+    .facelities{
+        flex-direction: column;
+    }
+}
